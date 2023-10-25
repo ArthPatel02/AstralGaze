@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AstralGaze</title>
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+  <a class="logo" href="#">Redplanet</a>
+  <ul>
+    <li><a class="active" href="#">Home</a></li>
+    <li><a href="#sec">Explore </a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</header>
+
+<section>
+  <img alt="stars" id="stars" src="stars.png">
+  <img alt="moon" id="moon" src="moon.png">
+  <img alt="mountains_behind" id="mountains_behind" src="mountains_behind.png">
+  <h2 id="text">AstralGaze</h2>
+  <a href="#sec" id="btn">Explore</a>
+  <img alt="mountains_front" id="mountains_front" src="mountains_front.png">
+</section>
+
+<div class="sec" id="sec">
+  <h2>Cosmic Chronicles</h2>
+  <p>Cosmic Chronicles, spanning the expanse of human history, tell a captivating tale of our unending fascination with
+    the cosmos. Throughout millennia, our ancestors gazed skyward, weaving tales and myths to explain the celestial
+    wonders
+    that graced the night sky. These early chronicles represent the humble beginnings of our cosmic journey, where the
+    stars
+    served as both guides and muses, shaping our understanding of the world and our place in it.
+
+    Fast-forward to the dawn of the scientific age, and the Cosmic Chronicles took a dramatic turn. Visionaries like
+    Galileo Galilei and Johannes Kepler peered through rudimentary telescopes, forever altering the narrative.
+    They shattered age-old beliefs, revealing a dynamic, heliocentric universe. The scientific revolution opened
+    a new chapter, unleashing a torrent of revelations about our solar system's intricacies and
+    launching us into the age of modern astronomy.</p><br>
+
+  <p>As telescopes improved and our technological prowess advanced, the Cosmic Chronicles expanded exponentially.
+    The Hubble Space Telescope, perched high above the Earth's atmosphere, has gifted us with breathtaking images of
+    distant galaxies, showcasing the unfathomable vastness of the cosmos. We've ventured to other worlds, with rovers
+    like Curiosity and Perseverance exploring the Martian landscape, and spacecraft like New Horizons making historic
+    flybys of Pluto and the Kuiper Belt. These missions have provided us with a deeper understanding of our celestial
+    neighbors and fueled our insatiable hunger for cosmic knowledge. Moreover, our quest to decipher the fundamental
+    laws governing the universe has led to groundbreaking theories, such as Einstein's theory of relativity and the
+    Standard Model of particle physics. These theories have further illuminated the intricate tapestry of
+    the cosmos, unraveling mysteries and challenging our perception of space and time.</p><br>
+
+  <p>The Cosmic Chronicles are far from complete. With each new revelation, they beckon us to probe deeper into the
+    mysteries of dark matter, dark energy, and the potential for extraterrestrial life. They inspire us to dream of
+    interstellar travel and to contemplate the very origins of the universe itself. As we stand on the precipice of
+    the cosmic unknown, the Chronicles remind us that our quest for cosmic enlightenment remains an ever-evolving,
+    awe-inspiring journey through the pages of space and time.</p>
+</div>
+
+<footer class="footer" style="overflow:auto">
+  <div id="contact">
+    <div class="left">
+      <p id="ftlogo">REDPLANET</p>
+      <p>© RedPlanet Pixels 2023 - All Rights Reserved.</p>
+    </div>
+
+    <div class="right">
+      <p>Made with ❤️ by Arth</p>
+      <p>Email : <a href="mailto:redplanetpixels@gmail.com">redplanetpixels@gmail.com</a></p>
+    </div>
+  </div>
+</footer>
+<script>
+  let stars = document.getElementById('stars');
+  let moon = document.getElementById('moon');
+  let mountains_behind = document.getElementById('mountains_behind');
+  let text = document.getElementById('text');
+  let btn = document.getElementById('btn');
+  let mountains_front = document.getElementById('mountains_front');
+  let header = document.querySelector('header');
+
+  window.addEventListener('scroll', function () {
+
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = 0 + 'px';
+    text.style.marginRight = value * 4 + 'px';
+    text.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+    header.style.top = value * 0.5 + 'px';
+  })
+</script>
+</body>
+</html>
